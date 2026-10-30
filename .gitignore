@@ -1,0 +1,6 @@
+node_modules/
+logs/
+.archive/
+emailReplies/*
+!emailReplies/2026-10-29_16-45-00.md
+.env

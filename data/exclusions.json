@@ -1,0 +1,4 @@
+{
+  "active_pipeline": ["northwindrevops.com", "quartzledger.io"],
+  "customers": ["tidewaterhq.com", "summitstack.co"]
+}

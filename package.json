@@ -1,0 +1,19 @@
+{
+  "name": "vampire-renewal-raider",
+  "version": "1.0.0",
+  "description": "Autonomous B2B churn-capture agent: intent signal -> FullEnrich -> Cargo -> Nenya guardrail -> emailReplies/*.md",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node scripts/demo.js",
+    "demo:a": "node scripts/demo.js --fixtures A",
+    "demo:b": "node scripts/demo.js --fixtures B",
+    "demo:c": "node scripts/demo.js --fixtures C",
+    "reset": "node scripts/reset.js",
+    "fallback": "node scripts/fallback.js",
+    "watch": "node scripts/watch.js",
+    "test": "node --test test/*.test.js"
+  }
+}

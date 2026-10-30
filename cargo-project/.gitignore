@@ -1,0 +1,3 @@
+node_modules/
+.cargo-ai/
+cargo.state.cache.json

@@ -1,0 +1,29 @@
+{
+  "name": "cargo-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm run types || echo 'Skipping workspace types. Run npm run types after cargo-ai login.'",
+    "lint": "npm run lint:context && npm run lint:outputs && npm run lint:copy",
+    "lint:context": "tsx scripts/ci/lint-context.ts",
+    "lint:outputs": "tsx scripts/ci/lint-outputs.ts",
+    "lint:copy": "tsx scripts/ci/check-copy.ts",
+    "eval": "npx -y promptfoo@latest eval -c evals/promptfooconfig.yaml",
+    "types": "cargo-ai cdk types",
+    "info": "cargo-ai cdk info",
+    "plan": "cargo-ai cdk plan",
+    "deploy": "cargo-ai cdk deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cargo-ai/cli": "^1.0.139",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.3.2",
+    "yaml": "^2.6.0"
+  },
+  "dependencies": {
+    "@cargo-ai/cdk": "^1.0.133",
+    "zod": "^4.4.3"
+  }
+}
