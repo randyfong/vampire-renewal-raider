@@ -44,7 +44,7 @@ scripts/tunnel.sh                                                    # terminal 
 SINK_URL=<public url> RAIDER_TOKEN=<token> node scripts/cargo-trigger.js A,B,C   # terminal 2
 ```
 
-A second tool, `vampire_renewal_raider_waterfall` (`infra/raider-waterfall.ts`), adds FullEnrich `searchPeople` and `findEmail`, the full waterfall. It takes about 90 s a run because of FullEnrich's email step, so use the fast tool live and point to the waterfall tool's trace. All three runs end in `success`. A writes a draft; B and C come back with their abort codes and write no file. Runs appear in Cargo under Traces. To set this up in a new workspace, follow RUNBOOK.md Part C.
+A second tool, `vampire_renewal_raider_waterfall` (`infra/raider-waterfall.ts`), adds FullEnrich `searchPeople` and `findEmail`, the full waterfall. It takes about 90 seconds a run because of FullEnrich's email step, so use the fast tool live and point to the waterfall tool's trace. All three runs end in `success`. A writes a draft; B and C come back with their abort codes and write no file. Runs appear in Cargo under Traces. To set this up in a new workspace, follow RUNBOOK.md Part C.
 
 ## 180-second run (split screen: left = Cargo + terminal, right = `npm run watch`)
 
